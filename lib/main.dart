@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
+import "package:google_fonts/google_fonts.dart";
 
 void main() {
   //entry point
@@ -23,11 +24,15 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-          primarySwatch: Colors.pink), //primarySwatch collection of color
+        primarySwatch: Colors.pink,
+        fontFamily: GoogleFonts.lato().fontFamily, // lato is a method
+        // primaryTextTheme:
+        //     GoogleFonts.latoTextTheme(), //primarySwatch collection of color
+      ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/home", // if u want to use by default home page
+      //initialRoute: "/home", // if u want to use by default home page
       routes: {
         "/": (context) => LoginPage(), // "/" but default HomePage(),
         "/home": (context) => HomePage(),
